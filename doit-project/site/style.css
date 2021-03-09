@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+
+*{
+    margin: 0;              /* 마진값 초기화*/
+    padding: 0;             /* 패딩값 초기화*/
+    box-sizing: border-box; /* 박스영역은 테두리까지 지정*/
+}
+
+/*
+id 앞에는 #
+class 앞에는 .
+태그(h나 p 등)는 그냥 알파벳.
+*/
+
+
+
+ul{
+    /* ul 태그: nav나 footer 등에 쓰임
+    ul태그의 불릿기호를 보이지않게 함.
+    */
+    list-style: none;
+}
+
+/* 1 컨테이너는 id */
+#container{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 2 헤더는 tag */
+header{
+    width:100%;
+    height: 100px;
+    background-color:#07C;
+}
+
+/* 3 로고는 id */
+#logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    /*background-color: indigo;*/
+}
+
+#logo h1{
+    /* 구글에서 웹폰트 가져옴*/
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color:#fff;
+    text-shadow: 0 -1px 0 #222;
+}
+
+/* 3-1 a는 링크, 밑줄을 제거하기 위한 스타일 작성 */
+a{
+    text-decoration: none;
+}
+
+/* 4 내비게이션은 tag */
+nav{
+    float: right;
+    width: 900px;
+    height: 100px; /*높이 100px,*/
+    padding-top: 40px;
+}
+
+/* 5 이미지슬라이드쇼 */
+#slideShow{
+    clear:both; /*플로팅 해제*/
+    width: 100%;
+    height: 300px;
+    background-color: orange;
+    overflow:hidden; /*영역이 넘치면 감춤*/
+}
+
+/* 6 콘텐츠 */
+#contents{
+    width:100%;
+    height: 300px;
+}
+
+/* 7 탑메뉴 */
+#topMenu{
+    height: 60px;
+}
+#topMenu > li{
+    /*메뉴를 가로로 배치하기 위해*/
+    float: left;
+    
+    /*서브메뉴(topMenu > li >ul)가 absolute 하려면 
+    그 부모인 li가 relative여야 함.*/
+    position: relative;
+}
+#topMenu > li > a{  
+    /*요소 스타일 변경*/
+    display:block;
+    color:#fff;
+    font-weight: 600;
+    text-shadow: 0 1px #07c;
+    padding: 20px 60px;
+}
+#topMenu > li > a > span{ 
+    /* ▼ 사이즈 변경하기 위해서
+    span은 특별한 기능없이 css와 쓰임.
+    컨텐츠 영역까지만 영역이 잡힘.*/
+    font-size:0.5em;
+}
+#topMenu > li > a:hover{ 
+    /*마우스 커서가 위치하면 스타일변경*/
+    color:#000;
+    text-shadow: 0 -1px #07c;
+}
+
+#topMenu > li >ul{
+    /*세부메뉴는 처음에 안보이도록*/
+    display: none;
+    /* 위치는 부모요소를 따름*/
+    position: absolute;
+    width: 160px;
+    background-color: rgba(255,255,255,0.6);
+    left: 20px;
+    margin: 0;
+}
+
+#topMenu > li > ul > li{
+    /*패딩은 시계방향으로 
+    위 오른쪽 아래 왼쪽의 여백을 지정.*/
+    padding: 10px 10px 10px 10px;
+}
+
+#topMenu > li > ul > li > a{
+    font-size: 14px;
+    padding: 10px;
+    color:#000;
+
+}
+
+#topMenu > li:hover > ul{
+    display: block;
+    z-index: 10;
+    
+}
+#topMenu > li > ul > li:hover > a{
+    color: #f00;
+    font-weight: bold;
+}
+
+l
+
+/* 8 퀵링크 */
+#links{
+    float: right;
+    width: 600px;
+    height: 100%;
+    background-color: skyblue;
+}
+
+/* 9 푸터 */
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+}
