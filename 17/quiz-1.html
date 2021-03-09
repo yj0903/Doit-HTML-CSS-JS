@@ -32,4 +32,16 @@
 		<li><span class="check">&check;</span>할 일 5 </li>
 	</ul>
 </body>
+
+<script>
+	var checks = document.querySelectorAll(".check");
+	for(var i = 0; i < checks.length; i++) {
+		checks[i].addEventListener("click", function() {
+			this.style.color = "#ccc";
+			this.parentNode.style.color = "#ccc";
+			this.parentNode.style.textDecoration="line-through";
+		});
+	}
+</script>
+
 </html>
