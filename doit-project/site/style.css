@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+/* https://buk.io/@kb5278/31 참고 */
 
 
 *{
@@ -67,22 +68,9 @@ nav{
     padding-top: 40px;
 }
 
-/* 5 이미지슬라이드쇼 */
-#slideShow{
-    clear:both; /*플로팅 해제*/
-    width: 100%;
-    height: 300px;
-    background-color: orange;
-    overflow:hidden; /*영역이 넘치면 감춤*/
-}
 
-/* 6 콘텐츠 */
-#contents{
-    width:100%;
-    height: 300px;
-}
 
-/* 7 탑메뉴 */
+/* 5 탑메뉴 */
 #topMenu{
     height: 60px;
 }
@@ -135,20 +123,69 @@ nav{
     font-size: 14px;
     padding: 10px;
     color:#000;
-
 }
 
 #topMenu > li:hover > ul{
     display: block;
     z-index: 10;
-    
 }
 #topMenu > li > ul > li:hover > a{
     color: #f00;
     font-weight: bold;
 }
 
-l
+
+/* 6 이미지슬라이드쇼 */
+#slideShow{
+    clear:both; /*플로팅 해제*/
+    width: 100%;
+    height: 300px;
+    overflow:hidden; /*영역이 넘치면 감춤*/
+    position:relative; /*slide의 부모요소*/
+}
+#slide{
+    position:absolute;
+}
+#slides > img{
+    width: 100%;
+    float: left; /*이미지를 가로로 배치*/
+}
+button{
+    /*버튼태그는 .이나 # 안써도 됨.*/
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border: none;/*테두리 없이*/
+    padding: 20px;
+    background-color: transparent;/*투명배경*/
+    color: #000;
+    font-weight: 1000;
+    font-size: 24px;
+    opacity: 0.5; /*반투명 화살표*/
+}
+#prev{
+    left:0; /*버튼 위치:slideShow 왼쪽에 바짝 붙여서*/
+}
+#next{
+    right: 0;/*버튼 위치:slideShow 오른쪽에 바짝 붙여서*/
+}
+button:hover{
+    /*버튼 위에 마우스 올리면 스타일 변화*/
+    background-color: #222;
+    color:#fff;
+    opacity:0.6;
+    cursor: pointer;
+}
+button:focus{
+    /*탭키로 해당링크에 오게될 때 바깥선을 없앰*/
+    outline: 0 ;
+}
+
+/* 7 콘텐츠 */
+#contents{
+    width:100%;
+    height: 300px;
+}
 
 /* 8 퀵링크 */
 #links{

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- https://buk.io/@kb5278/31 참고-->
+
 <body>
     <!--1 컨테이너-->
     <div id = "container">
@@ -21,6 +23,7 @@
             </div>
             <!--4 내비게이션-->
             <nav>
+                <!-- 5 탑메뉴 -->
                 <ul id = "topMenu">
                     <li><a href="#">단체 여행 <span>▼</span></a>
                         <ul>
@@ -35,21 +38,38 @@
                             <li><a href="#"> 힐링 워크숍</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"> 갤러리 <span>▼</span></a>
+                    <li><a href="#"> 갤러리</a>
                     </li>
-                    <li><a href="#"> 문의하기 <span>▼</span></a>
+                    <li><a href="#"> 문의하기</a>
                     </li>
                 </ul>
             </nav>    
         </header>
 
-        <!--5 이미지슬라이드쇼-->
+
+
+
+
+        <!--6 이미지슬라이드쇼-->
         <div id = "slideShow">
+            <div id = "slide">
+                <!--슬라이드쇼의 이미지를 담기위한 공간 마련-->
+                <img src = "images/photo-1.jpg" alt="사진1">
+                <img src = "images/photo-2.jpg" alt="사진2">
+                <img src = "images/photo-3.jpg" alt="사진3">
+                <!--이전, 다음 버튼-->
+                <button id = "prev"> &lang;</button>
+                <button id = "next"> &rang;</button>
+            </div>
+
         </div>
 
-        <!--6 콘텐츠-->
+
+
+
+        <!--7 콘텐츠-->
         <div id = "contents">
-            <!--7 탑메뉴-->
+            <!-- 탑메뉴-->
             <div id = "topMenu">
             </div>
             <!--8 퀵링크-->
@@ -61,5 +81,13 @@
         <footer>
         </footer>
     </div>
+
+
+    <script src = "slideshow/js"> </script>
+
+
+
+
+
 </body>
 </html>
