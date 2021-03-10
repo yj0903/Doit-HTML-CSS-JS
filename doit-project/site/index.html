@@ -46,48 +46,94 @@
             </nav>    
         </header>
 
-
-
-
-
         <!--6 이미지슬라이드쇼-->
         <div id = "slideShow">
-            <div id = "slide">
+            <div id = "slides">
                 <!--슬라이드쇼의 이미지를 담기위한 공간 마련-->
                 <img src = "images/photo-1.jpg" alt="사진1">
                 <img src = "images/photo-2.jpg" alt="사진2">
                 <img src = "images/photo-3.jpg" alt="사진3">
-                <!--이전, 다음 버튼-->
+                <!--이전, 다음 버튼
+                &lang: <
+                &rang: >    
+                -->
                 <button id = "prev"> &lang;</button>
                 <button id = "next"> &rang;</button>
             </div>
 
         </div>
 
-
-
-
         <!--7 콘텐츠-->
         <div id = "contents">
-            <!-- 탑메뉴-->
-            <div id = "topMenu">
+            <!-- 탭 메뉴-->
+            <div id = "tabMenu">
+                <!--라디오버튼
+                    
+                    으로 공지사항 탭 디폴트로 설정-->
+                <input type = "radio" id = "tab1" name = "tabs" checked>
+                <label for = "tab1"> 공지사항 </label>
+                <!-- 라디오버튼으로 갤러리 탭 생성-->
+                <input type = "radio" id = "tab2" name = "tabs">
+                <label for = "tab2"> 갤러리 </label>
+
+                <div id = "notice" class = "tabContent">
+                    <h2> 공지사항 내용입니다. </h2>        
+                    <ul>
+                        <li>사무실을 이전했습니다.</li>
+                        <li>사무실을 이전했습니다.</li>
+                        <li>사무실을 이전했습니다.</li>
+                        <li>사무실을 이전했습니다.</li>
+                    </ul>
+                </div>
+                <div id = "gallery" class = "tabContent">
+                    <h2> 갤러리 내용입니다. </h2>
+                    <ul>
+                        <li><img src="images/img-1.jpg"></li>
+                        <li><img src="images/img-2.jpg"></li>
+                        <li><img src="images/img-3.jpg"></li>
+                        <li><img src="images/img-1.jpg"></li>
+                        <li><img src="images/img-2.jpg"></li>
+                        <li><img src="images/img-3.jpg"></li>
+
+                    </ul>
+                </div>
+
             </div>
-            <!--8 퀵링크-->
+            <!--9 퀵링크-->
             <div id = "links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon1"></span>
+                            <p>평화 기행</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon2"></span>
+                            <p>힐링 워크숍</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon3"></span>
+                            <p>문의하기</p>
+                      
+                      
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </div>
 
-        <!--9 푸터-->
+        <!--10 푸터-->
         <footer>
         </footer>
     </div>
 
 
-    <script src = "slideshow/js"> </script>
-
-
-
-
-
+    <script src = "js/slideshow.js"> </script>
+<!--    <script src = "js/autoslideshow.js"> </script> -->
 </body>
 </html>

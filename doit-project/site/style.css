@@ -14,7 +14,10 @@ class 앞에는 .
 태그(h나 p 등)는 그냥 알파벳.
 */
 
-
+/* 3-1 a는 링크, 밑줄을 제거하기 위한 스타일 작성 */
+a{
+    text-decoration: none;
+}
 
 ul{
     /* ul 태그: nav나 footer 등에 쓰임
@@ -55,10 +58,7 @@ header{
     text-shadow: 0 -1px 0 #222;
 }
 
-/* 3-1 a는 링크, 밑줄을 제거하기 위한 스타일 작성 */
-a{
-    text-decoration: none;
-}
+
 
 /* 4 내비게이션은 tag */
 nav{
@@ -108,7 +108,7 @@ nav{
     /* 위치는 부모요소를 따름*/
     position: absolute;
     width: 160px;
-    background-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
     left: 20px;
     margin: 0;
 }
@@ -116,7 +116,7 @@ nav{
 #topMenu > li > ul > li{
     /*패딩은 시계방향으로 
     위 오른쪽 아래 왼쪽의 여백을 지정.*/
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 30px;
 }
 
 #topMenu > li > ul > li > a{
@@ -143,7 +143,7 @@ nav{
     overflow:hidden; /*영역이 넘치면 감춤*/
     position:relative; /*slide의 부모요소*/
 }
-#slide{
+#slides{
     position:absolute;
 }
 #slides > img{
@@ -187,16 +187,83 @@ button:focus{
     height: 300px;
 }
 
-/* 8 퀵링크 */
+/* 8 탭 메뉴 */
+#tabMenu{
+    float: left;
+    width: 600px;
+    height: 100%;
+    margin-top: 10px;
+}
+#tabMenu input[type="radio"]{
+    display: none;
+}
+#tabMenu label{
+    display: inline-block; /*탭 가로로 배치*/
+    margin: 0 0; 
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent;
+}
+#tabMenu label:hover{
+    color: #222;
+    cursor: pointer;
+}
+#tabMenu input:checked + label{
+    color:#b00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+.tabContent{
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+.tabContent h2{
+    display: none;
+}
+#notice ul{
+    list-style:disc;
+    margin-left:30px;
+}
+#notice ul li{
+    font-size: 16px;
+    line-height: 2.5;
+}
+#gallery ul li{
+    display: inline;
+}
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery{
+    display: block;
+}
+
+
+
+
+/* 9 퀵링크 */
 #links{
     float: right;
     width: 600px;
     height: 100%;
-    background-color: skyblue;
 }
-
-/* 9 푸터 */
-#footer{
+#links ul{
+    padding:0;
+    overflow: hidden;
+}
+#links ul li{
+    float: left;
+    width: 33%;
+    text-align:center;
+    margin: 10px 0;
+}
+#link ul li a span{
+    display: block;
+    margin: 0 auto;
+}
+/* 10 푸터 */
+footer{
     width: 100%;
     height: 100px;
     background-color: gray;
