@@ -185,6 +185,8 @@ button:focus{
 #contents{
     width:100%;
     height: 300px;
+    margin-top:20px;
+    margin-top: 20px;
 }
 
 /* 8 탭 메뉴 */
@@ -242,11 +244,15 @@ button:focus{
 
 
 
-/* 9 퀵링크 */
+/* 9 퀵링크 
+메뉴를 잘 보이는 위치에 모아두기 위함.
+
+*/
 #links{
     float: right;
     width: 600px;
     height: 100%;
+    margin-top:15px;
 }
 #links ul{
     padding:0;
@@ -258,13 +264,69 @@ button:focus{
     text-align:center;
     margin: 10px 0;
 }
-#link ul li a span{
+#links ul li a span{
+    /*이미지가 들어가는 span*/
     display: block;
     margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%; /*테두리를 동그랗게 지정*/
+    border: 1px solid #ddd;
+    line-height: 150px;
 }
+#quick-icon1{
+    background-image:url('../images/icon-1.jpg');
+}
+#quick-icon2{
+    background-image:url('../images/icon-2.jpg');
+}
+#quick-icon3{
+    background-image:url('../images/icon-3.jpg');
+}
+#licks ul li a p{
+    margin-top: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+
+
 /* 10 푸터 */
 footer{
     width: 100%;
     height: 100px;
-    background-color: gray;
+    border-top: 2px solid #222; /*위쪽에 가로선 삽입*/
+}
+#bottomMenu{
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+#bottomMenu ul{
+    margin-top: 15px;
+}
+#bottomMenu ul li{
+    float: left; /*가로로 배치*/
+    padding: 5px 20px;
+    border-right: 1px solid #ddd; /*항목 오른쪽에 세로선*/
+}
+#bottomMenu ul li:last-child{
+    border-right:none;
+}
+#sns{
+    position: absolute; /*부모요소bottomMenu는 relative여야 함*/
+    right: 0; /*오른쪽으로 바짝 붙임*/
+}
+#sns ul li{
+    border: none; /*불필요한 세로선 없앰*/
+    padding: 5px;
+}
+#company{
+    clear: left;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+p{
+    font-size: 14px;
+    color: #aaa;
 }
